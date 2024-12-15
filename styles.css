@@ -1,26 +1,42 @@
 body {
   font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
 }
 
 .container {
   display: flex;
-  border: 2px solid black;
-  display: flex;
   flex-wrap: wrap;
+  border: 2px solid black;
   width: 960px;
   height: 960px;
+  box-sizing: border-box; /* Ensure padding and borders are included in the container size */
 }
+
 .grid-item {
-  background-color: black;
+  background-color: white; /* Default background color for grid items */
   border: 1px solid gray;
-  flex: 1 0 calc(100% / 16);
-  height: calc(100% / 16);
-  box-sizing: border-box;
+  box-sizing: border-box; /* Ensure borders are included in size calculations */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* .grid-item:hover {
-  background-color: lightblue;
-} */
+button {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ddd; /* Button hover effect */
+}
