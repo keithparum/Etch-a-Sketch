@@ -1,9 +1,15 @@
+"use strict";
+
 const container = document.querySelector(".container");
 
-const gridBuilder = (numRows, numColumns) {
-
+function gridBuilder(rows, columns) {
+  for (let i = 0; i < rows; i++) {
+    for (let j = 0; j < columns; j++) {
+      const gridItem = document.createElement("div");
+      gridItem.className = "grid-item";
+      container.appendChild(gridItem);
+    }
+  }
 }
 
-for (i = 0; i < ; i++) {
-  container.innerHTML = "<div class='cell'></div>";
-}
+gridBuilder(16, 16);
